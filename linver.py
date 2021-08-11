@@ -5,6 +5,12 @@ import platform
 import getpass as gp
 import datetime as dt
 import psutil
+import webbrowser
+
+
+def github():
+    # Abrir o repositório do projeto no github pelo nevegador padrão
+    webbrowser.open("https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver")
 
 
 def main():
@@ -19,12 +25,24 @@ def main():
     memused = round(mem.used / (1024 ** 3), 2)
     # Nome ou arquitetura do cpu
     cpu = platform.processor()
+    if cpu == '':
+        cpu = 'unknown'
     # Discos
     disks = psutil.disk_partitions()
     disks_list = []
     for disk in disks:
-        disks_list.append(disk.mountpoint)
-    discos = len(disks_list)
+        device = disk.device
+        if device.split("/")[-1][0:-1] == 'loop':
+            pass
+        else:
+            disks_list.append(device)
+    partitions = len(disks_list)
+    discos = {"sda"}
+    for disk in disks_list:
+        discos.add(disk.split("/")[-1][0:-1])
+
+    # Número de discos
+    ndiscos = len(discos)
     
     # Conseguir o uptime
     uptime = dt.datetime.now() - dt.datetime.fromtimestamp(psutil.boot_time())
@@ -40,7 +58,7 @@ def main():
     # Váriabel root como tkinter.Tk()
     root = tk.Tk()
     root.title("Linver")
-    root.geometry("550x470")
+    #root.geometry("550x470")
     root.resizable(False, False)
     # set background for #ffffff
     root.configure(background="#ffffff")
@@ -63,11 +81,11 @@ def main():
 Version {distrover} (Kernel {kernelver})
 © {year}.
 
-This program is a free software and its Github page is:
-TODO: Put the link here
+This program is a free and open source product.
 
-This product is running on a {memtotal} GB of RAM machine, which has 
-{memused} GB used. Its cpu is a {cpu}. The number of disks is {discos}.
+This product is running on a {memtotal} GB of RAM machine, which  {memused} GB is being used.
+The number of partitions mounted is {partitions} in {ndiscos} disk(s).
+({', '.join(disks_list)}.)
 
 Machine name is {platform.node()} and its uptime is:
 {uptimestr}
@@ -75,13 +93,18 @@ Machine name is {platform.node()} and its uptime is:
 {gp.getuser()}
 
 """, bg="#ffffff", fg=fontcolor)
-    label.grid(row=4, column=1)
+    label.grid(row=4, column=2)
 
 
     # Criar botão de sair
     exitbutton = tk.Button(root, text="Ok", bg="#ffffff", fg=fontcolor, 
     command=exit, activebackground="#e0e0e0", borderwidth=1, highlightthickness=0, activeforeground="#000000")
-    exitbutton.grid(row=5, column=1, columnspan=1, sticky="nsew")
+    exitbutton.grid(row=5, column=2, columnspan=1, sticky="nsew")
+
+    # Criar um botão que redireciona para a página do github (https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver)
+    githubbutton = tk.Button(root, text="Github", bg="#ffffff", fg=fontcolor, 
+    command=github, activebackground="#e0e0e0", borderwidth=1, highlightthickness=0, activeforeground="#000000")
+    githubbutton.grid(row=6, column=2, columnspan=1, sticky="nsew")
 
     root.mainloop()
 
