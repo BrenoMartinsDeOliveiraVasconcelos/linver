@@ -2,6 +2,7 @@ Winver recreation for Linux
 
 # Screenshots #
 * GUI mode
+If there's no image for your distro, the program will put Tux instead. 
 <br> ![alt text](https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver/blob/main/screenshots/example.png?raw=true)
 * Command Line mode
 <br> ![alt text](https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver/blob/main/screenshots/sampleclm.png?raw=true)
@@ -39,7 +40,7 @@ Will change distro name, useful to test new images
 WIll run the command line version
 
 # Adding new images for not listed distros or change existing distro images #
-To dd new images or change distro images, the image needs to follow these rules to the modification work propely:
+To add new images or change distro images, the image needs to follow these rules to the modification work propely:
 * The image needs to be in PNG format
 * Size between 300x300 and 600x600 (Recommended)
 
