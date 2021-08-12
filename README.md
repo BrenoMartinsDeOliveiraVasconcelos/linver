@@ -29,8 +29,7 @@ See the apropriate documentation for details
 
 Then do:
 
-python3 -m pip install -r requeriments.txt
-python3 linver.py
+python3 -m pip install -r requeriments.txt && python3 linver.py
 
 # Arguments #
 You can run using arguments to modify how the program will work
