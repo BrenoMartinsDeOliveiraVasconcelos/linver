@@ -90,7 +90,7 @@ There are {partitions} partitions mounted across {ndiscos} disk{'s' if ndiscos >
 Host name: {platform.node()}
 Uptime: {uptimestr}
 
-Thank your for using this program, {gp.getuser()}! ^-^
+Thank you for using this program, {gp.getuser()}! ^-^
     """
     if '--clmode' not in args:
         # Váriabel image como linux.png como placeholder
