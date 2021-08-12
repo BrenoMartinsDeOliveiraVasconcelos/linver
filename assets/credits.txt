@@ -1,0 +1,6 @@
+ This file lists the links where assets images were taken.
+
+ https://brasilcloud.com.br/wp-content/uploads/2018/09/logo-linux.png (Edited)
+ https://upload.wikimedia.org/wikipedia/commons/a/a5/Manjaro_logo_text.png
+ https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Former_Ubuntu_logo.svg/320px-Former_Ubuntu_logo.svg.png
+ https://upload.wikimedia.org/wikipedia/commons/0/04/Debian_logo.png (Edited)
