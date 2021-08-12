@@ -3,9 +3,9 @@ Winver recreation for Linux
 # Screenshots #
 * GUI mode
 <br> If there's no image for your distro, the program will put Tux instead. 
-<br> ![alt text](https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver/blob/main/screenshots/example.png?raw=true)
+<br> ![alt text](https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver/blob/main/screenshots/gui.png?raw=true)
 * Command Line mode
-<br> ![alt text](https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver/blob/main/screenshots/sampleclm.png?raw=true)
+<br> ![alt text](https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver/blob/main/screenshots/clm.png?raw=true)
 
 # Running it #
 This program uses tkinter, some distros doesn't have it installed by defult. There is how to install it:
