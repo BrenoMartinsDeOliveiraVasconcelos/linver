@@ -55,6 +55,7 @@ def main():
             pass
         else:
             disks_list.append(device)
+    disks_list = sorted(disks_list)
     partitions = len(disks_list)
     discos = {"sda"}
     for disk in disks_list:
@@ -69,8 +70,10 @@ def main():
     # Conseguir o uptime
     uptime = dt.datetime.now() - dt.datetime.fromtimestamp(psutil.boot_time())
     uptime = (str(uptime).split('.')[0]).split(":")
+    for i in range(len(uptime)):
+        uptime[i] = int(uptime[i])
 
-    uptimestr = f"{uptime[0]} hour(s), {uptime[1]} minute(s) and {uptime[2]} second(s)."
+    uptimestr = f"{uptime[0]} hour{'s' if uptime[0] > 1 else ''}, {uptime[1]} minute{'s' if uptime[1] > 1 else ''} and {uptime[2]} second{'s' if uptime[2] > 1 else ''}."
 
     script_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -78,14 +81,14 @@ def main():
 Version {distrover} {codename} (Build {build}, kernel {kernelver})
 © {year}.
 
-This program is a free and open source product.
+Linver is a free and open source product.
 
-This product is running on a {memtotal} GB of RAM machine, which  {memused} GB is being used.
-The number of partitions mounted is {partitions} in {ndiscos} disk(s).
+This machine is using {memused}GB of its {memtotal}GB RAM.
+There are {partitions} partitions mounted across {ndiscos} disk{'s' if ndiscos > 1 else ""}.
 ({', '.join(disks_list)}.)
 
-Machine name is {platform.node()} and its uptime is:
-{uptimestr}
+Host name: {platform.node()}
+Uptime: {uptimestr}
 
 Thank your for using this program, {gp.getuser()}! ^-^
     """
