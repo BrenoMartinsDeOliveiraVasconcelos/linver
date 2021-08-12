@@ -6,6 +6,31 @@ Winver recreation for Linux
 * Command Line mode
 <br> ![alt text](https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver/blob/main/screenshots/sampleclm.png?raw=true)
 
+# Running it #
+This program uses tkinter, some distros doesn't have it installed by defult. There is how to install it:
+### Debian/Ubuntu (or based) ###
+sudo apt install python3-tk
+
+### Arch or based ###
+sudo pacman -Sy python3-tk
+
+### Other ###
+See the apropriated documentation for details
+
+After installing tkinter, install python3-pip if it is not installed
+### Debian/Ubuntu (or based) ###
+sudo apt install python3-pip
+
+### Arch or based ###
+sudo pacman -Sy python3-pip
+
+### Other ###
+See the apropriate documentation for details
+
+Then do:
+
+python3 -m pip install -r requeriments.txt
+python3 linver.py
 
 # Arguments #
 You can run using arguments to modify how the program will work
