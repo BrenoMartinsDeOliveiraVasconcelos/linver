@@ -2,7 +2,7 @@ Winver recreation for Linux
 
 # Screenshots #
 * GUI mode
-If there's no image for your distro, the program will put Tux instead. 
+<br> If there's no image for your distro, the program will put Tux instead. 
 <br> ![alt text](https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver/blob/main/screenshots/example.png?raw=true)
 * Command Line mode
 <br> ![alt text](https://github.com/BrenoMartinsDeOliveiraVasconcelos/linver/blob/main/screenshots/sampleclm.png?raw=true)
