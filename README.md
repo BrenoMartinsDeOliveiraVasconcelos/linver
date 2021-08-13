@@ -13,7 +13,7 @@ This program uses tkinter, some distros doesn't have it installed by defult. The
 sudo apt install python3-tk
 
 ### Arch or based ###
-sudo pacman -Sy python3-tk
+sudo pacman -S python3-tk
 
 ### Other ###
 See the apropriated documentation for details
@@ -23,7 +23,7 @@ After installing tkinter, install python3-pip if it is not installed
 sudo apt install python3-pip
 
 ### Arch or based ###
-sudo pacman -Sy python3-pip
+sudo pacman -S python3-pip
 
 ### Other ###
 See the apropriate documentation for details
